@@ -151,9 +151,10 @@ module.exports = function (source) {
       array = array.slice(_start, _start + _limit)
     }
 
-    res.locals.data = array
-
-    console.log(req.params);
+    res.locals.data = {
+      items: array,
+      total: array.length
+    };
 
     next()
   }
