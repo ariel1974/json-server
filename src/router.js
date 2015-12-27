@@ -152,6 +152,9 @@ module.exports = function (source) {
     }
 
     res.locals.data = array
+
+    console.log(req.params);
+
     next()
   }
 
